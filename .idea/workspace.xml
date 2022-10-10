@@ -5,17 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/kth/lab4/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/kth/lab4/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4_uml.dia" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2FxUxUe9qJ6bKibBrfvz4Qo1r1Q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -38,8 +46,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665433478837</updated>
-      <workItem from="1665433480410" duration="2000" />
+      <workItem from="1665433480410" duration="344000" />
     </task>
+    <task id="LOCAL−00001" summary="First commit">
+      <created>1665433530414</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1665433530414</updated>
+    </task>
+    <task id="LOCAL−00002" summary="First commit">
+      <created>1665433599643</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1665433599643</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
   </component>
 </project>
