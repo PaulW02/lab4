@@ -1,5 +1,6 @@
 package com.kth.lab4.view;
 
+import com.kth.lab4.controller.ImageController;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,6 +22,7 @@ public class LoadImageIntoImageViewWithFileChooser extends Application {
 
     private ImageView imageView;
     private FileChooser fileChooser;
+    private ImageController imageController;
 
     @Override
     public void start(Stage primaryStage) {
@@ -66,7 +68,16 @@ public class LoadImageIntoImageViewWithFileChooser extends Application {
         // now, load the image
         if(file != null) {
             Image image = new Image(file.toURI().toString());
+            int[][] matrix = new int[(int) image.getWidth()][(int) image.getHeight()];
             imageView.setImage(image);
+            for (int i = 0; i < image.getWidth(); i++){
+                for (int j = 0; j < image.getHeight(); j++){
+                    matrix[i][j] = image.getPixelReader().getArgb(i,j);
+                }
+            }
+            imageController = new ImageController(matrix);
+            MenuView menuView = new MenuView(imageController, imageView);
+            menuView.start(stage);
 
             // this will scale the image/image view to fit its container (pane)
             imageView.fitWidthProperty().bind(stage.widthProperty());

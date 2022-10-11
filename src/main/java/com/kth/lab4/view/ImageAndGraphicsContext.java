@@ -39,7 +39,7 @@ public class ImageAndGraphicsContext extends Application {
         // Load the image
         image = new Image(
                 this.getClass().
-                getResource("resources/devil.png").
+                getResource("/images/devil.png").
                 toString());
         width = image.getWidth() / 5;
         height = image.getHeight() / 5;

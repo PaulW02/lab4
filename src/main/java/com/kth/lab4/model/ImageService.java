@@ -10,7 +10,8 @@ public class ImageService {
     }
 
     public int[][] handleImage(IImageHandler handler){
-        return new int[0][];
+        this.matrix = handler.processImage(matrix);
+        return this.matrix;
     }
 
     public int[][] createHistogram(int[][] imageData){

@@ -24,7 +24,7 @@ public class ImageViewExample extends Application {
     public void start(Stage stage) {
 
         // Load the image - see comment above on where to place the image file.
-        Image image = new Image(this.getClass().getResource("images/devil.png").toString());
+        Image image = new Image(this.getClass().getResource("/images/devil.png").toString());
 
         // Display the image as is.
         ImageView firstView = new ImageView();
