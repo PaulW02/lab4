@@ -1,80 +1,63 @@
 package com.kth.lab4.view;
-
 import com.kth.lab4.controller.ImageController;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.util.Collection;
 
-import static org.controlsfx.control.action.ActionUtils.createMenuBar;
-
-public class LoadImageIntoImageViewWithFileChooser extends Application {
+public class PhotoView extends BorderPane{
 
     private ImageView imageView;
+    private MenuBar menuBar;
     private FileChooser fileChooser;
     private ImageController imageController;
-    private MenuBar menuBar;
+
+    private MenuView menuView;
+
+    private Stage stage;
 
 
-    @Override
-    public void start(Stage primaryStage) {
+    public PhotoView(Stage stage, MenuBar menuBar) {
+        super();
+        this.stage = stage;
+        this.menuBar = menuBar;
+        createUiComponents();
+    }
 
+    private void createUiComponents(){
         imageView = new ImageView();
         fileChooser = new FileChooser();
-        FileChooser.ExtensionFilter extFilter =
-                new FileChooser.ExtensionFilter(
-                        "png files", "*.png");
-        fileChooser.getExtensionFilters().add(extFilter);
-        fileChooser.setTitle("Open Image File");
-
-
         Button loadButton = new Button("Load image");
+
+        Scene scene = new Scene(this, 400, 400);
+        scene.setFill(Color.WHITE);
         loadButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                openAndLoadImage(primaryStage);
+                openAndLoadImage();
             }
         });
 
-        VBox vBox = new VBox(menuBar,imageView);
-        // ui stuff ...
-        BorderPane root = new BorderPane();
-        root.getChildren().add(vBox);
-        root.setCenter(imageView);
-        FlowPane CenterPane = new FlowPane();
-        CenterPane.setAlignment(Pos.CENTER);
-        CenterPane.setPadding(new Insets(5,5,5,5));
-        CenterPane.getChildren().add(loadButton);
-        root.setCenter(CenterPane);
-
-        Scene scene = new Scene(root, 400, 400);
-        scene.setFill(Color.WHITE);
-
-        primaryStage.setTitle("Photo editor");
-        primaryStage.setScene(scene);
-        primaryStage.sizeToScene();
-        primaryStage.show();
-
+        FlowPane pane = new FlowPane();
+        pane.setAlignment(Pos.BOTTOM_CENTER);
+        pane.setPadding(new Insets(5));
+        pane.getChildren().add(loadButton);
+        this.setBottom(pane);
     }
-    private void openAndLoadImage(Stage stage) {
+
+    private void openAndLoadImage() {
 
         File file = fileChooser.showOpenDialog(stage);
 
@@ -89,7 +72,7 @@ public class LoadImageIntoImageViewWithFileChooser extends Application {
                 }
             }
             imageController = new ImageController(matrix);
-
+            menuView = new MenuView(stage, imageController, imageView, menuBar);
 
             // this will scale the image/image view to fit its container (pane)
             imageView.setFitWidth(200);
@@ -102,9 +85,5 @@ public class LoadImageIntoImageViewWithFileChooser extends Application {
         else {
             // show an Alert
         }
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

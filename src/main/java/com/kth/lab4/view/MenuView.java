@@ -1,41 +1,45 @@
 package com.kth.lab4.view;
 
 import com.kth.lab4.controller.ImageController;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.effect.BoxBlur;
-import javafx.scene.effect.MotionBlur;
+import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
-
-public class MenuView extends Application{
+public class MenuView extends BorderPane{
 
     private ImageController imageController;
     private ImageView imageView;
-    public MenuView(ImageController imageController, ImageView imageView) {
+
+    private Stage stage;
+
+    private MenuBar menuBar;
+    public MenuView(Stage stage, ImageController imageController, ImageView imageView, MenuBar menuBar) {
+        this.stage = stage;
         this.imageController = imageController;
         this.imageView = imageView;
-
+        this.menuBar = menuBar;
+        createUiComponents();
     }
 
-    @Override
-    public void start(Stage primaryStage) {
+    private void createUiComponents(){
+        VBox root = new VBox(menuBar, this);
+        Scene scene = new Scene(root, 400, 400);
+        scene.setFill(Color.WHITE);
 
         Button blurImageBtn = new Button("Blur image");
+
         blurImageBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -76,33 +80,22 @@ public class MenuView extends Application{
             }
         });
 
+        stage.setScene(scene);
         // ui stuff ...
-        BorderPane root = new BorderPane();
-        FlowPane bottomPane = new FlowPane();
-        bottomPane.setAlignment(Pos.CENTER);
-        bottomPane.setPadding(new Insets(5,5,5,5));
-        bottomPane.getChildren().add(blurImageBtn);
-        bottomPane.getChildren().add(invertColorsBtn);
-        bottomPane.getChildren().add(edgeIntensifierBtn);
-        bottomPane.getChildren().add(contrastBtn);
-        root.setBottom(bottomPane);
-        root.setCenter(imageView);
-        Scene scene = new Scene(root, 400, 400);
-        scene.setFill(Color.WHITE);
-        primaryStage.setTitle("ImageView example");
-        primaryStage.setScene(scene);
-        primaryStage.sizeToScene();
-        primaryStage.show();
         imageView.setFitWidth(100);
         imageView.setPreserveRatio(true);
         imageView.setSmooth(true);
 
+        FlowPane pane = new FlowPane();
+        pane.setAlignment(Pos.BOTTOM_CENTER);
+        pane.setPadding(new Insets(5));
+        pane.getChildren().addAll(blurImageBtn, contrastBtn, invertColorsBtn, edgeIntensifierBtn, imageView);
+
+        this.setCenter(imageView);
+        this.setBottom(pane);
+        stage.show();
     }
 
-
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 
 }
+

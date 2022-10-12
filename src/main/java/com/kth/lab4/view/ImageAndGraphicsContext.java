@@ -16,6 +16,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
@@ -43,6 +44,7 @@ public class ImageAndGraphicsContext extends Application {
                 toString());
         width = image.getWidth() / 5;
         height = image.getHeight() / 5;
+
 
         Scene scene = new Scene(root);
         primaryStage.setTitle("ImageAndGraphicsContext");
