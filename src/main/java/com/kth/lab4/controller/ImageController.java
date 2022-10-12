@@ -23,12 +23,12 @@ public class ImageController {
         return imageService.handleImage(new BlurHandlerImpl());
     }
 
-    public void invertImageColors(){
-        imageService.handleImage(new InvertColorHandlerImpl());
+    public int[][] invertImageColors(){
+        return imageService.handleImage(new InvertColorHandlerImpl());
     }
 
-    public void intensifyImageEdges(){
-        imageService.handleImage(new EdgeIntensifierHandlerImpl());
+    public int[][] intensifyImageEdges(){
+        return imageService.handleImage(new EdgeIntensifierHandlerImpl());
     }
 
 }
