@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/PhotoView.java" afterDir="false" />
+    <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="Skeleton code">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/BlurHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/BlurHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ImageAndGraphicsContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ImageAndGraphicsContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/LoadImageIntoImageViewWithFileChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/LoadImageIntoImageViewWithFileChooser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/TimerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/TimerExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/WindowClosingExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/WindowClosingExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +172,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1665473139588</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Skeleton code">
+      <created>1665592500974</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1665592500975</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

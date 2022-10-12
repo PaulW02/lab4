@@ -33,7 +33,7 @@ public class WindowClosingExample extends Application {
 				if (result.get() == ButtonType.CANCEL) {
 					event.consume();
 				}
-			}
+            }
 		});
 
 		stage.show();

@@ -59,6 +59,7 @@ public class MenuView extends BorderPane{
             @Override
             public void handle(ActionEvent event) {
                 imageController.invertImageColors();
+
             }
         });
 
@@ -69,6 +70,7 @@ public class MenuView extends BorderPane{
                 Image image = new Image(this.getClass().getResource("/images/devil.png").toString());
                 imageView.setImage(image);
                 imageController.changeImageContrast();
+
             }
         });
 
@@ -77,6 +79,7 @@ public class MenuView extends BorderPane{
             @Override
             public void handle(ActionEvent event) {
                 imageController.intensifyImageEdges();
+
             }
         });
 
