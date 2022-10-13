@@ -1,7 +1,6 @@
 package com.kth.lab4.view;
 
 import com.kth.lab4.controller.ImageController;
-import com.kth.lab4.model.Histogram;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;

@@ -43,7 +43,7 @@ public class TimerExample extends Application {
         		imView.setRotate(180);
         		Timer timer = new Timer();
         		timer.schedule(new RotateBackTask(), 2000);
-        	}
+            }
         });
     }
     
