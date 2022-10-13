@@ -1,6 +1,7 @@
 package com.kth.lab4.view;
 
 import com.kth.lab4.controller.ImageController;
+import com.kth.lab4.model.Histogram;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -43,13 +44,8 @@ public class MenuView extends BorderPane{
         blurImageBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                WritableImage writableImage = new WritableImage(imageView.getImage().getPixelReader(), (int) imageView.getImage().getWidth(), (int) imageView.getImage().getHeight());
                 int[][] blurredImageMatrix = imageController.blurImage();
-                for (int i = 0; i < blurredImageMatrix.length; i++){
-                    for (int j = 0; j < blurredImageMatrix[0].length; j++){
-                        writableImage.getPixelWriter().setArgb(i,j, blurredImageMatrix[i][j]);
-                    }
-                }
+                WritableImage writableImage = (WritableImage) ImagePixelMatrixConverter.getImage(blurredImageMatrix);
                 imageView.setImage(writableImage);
             }
         });
@@ -76,7 +72,17 @@ public class MenuView extends BorderPane{
         edgeIntensifierBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                imageController.intensifyImageEdges();
+                WritableImage writableImage = (WritableImage) ImagePixelMatrixConverter.getImage(imageController.intensifyImageEdges());
+                imageView.setImage(writableImage);
+            }
+        });
+
+        Button histogramBtn = new Button("Create histogram");
+        histogramBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                HistogramView histogramView = new HistogramView();
+                histogramView.createChart(stage, imageView.getImage(), imageController.handleHistogramSelected());
             }
         });
 
@@ -89,7 +95,7 @@ public class MenuView extends BorderPane{
         FlowPane pane = new FlowPane();
         pane.setAlignment(Pos.BOTTOM_CENTER);
         pane.setPadding(new Insets(5));
-        pane.getChildren().addAll(blurImageBtn, contrastBtn, invertColorsBtn, edgeIntensifierBtn, imageView);
+        pane.getChildren().addAll(blurImageBtn, contrastBtn, invertColorsBtn, edgeIntensifierBtn, histogramBtn, imageView);
 
         this.setCenter(imageView);
         this.setBottom(pane);

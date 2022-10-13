@@ -64,13 +64,8 @@ public class PhotoView extends BorderPane{
         // now, load the image
         if(file != null) {
             Image image = new Image(file.toURI().toString());
-            int[][] matrix = new int[(int) image.getWidth()][(int) image.getHeight()];
+            int[][] matrix = ImagePixelMatrixConverter.getPixelMatrix(image);
             imageView.setImage(image);
-            for (int i = 0; i < image.getWidth(); i++){
-                for (int j = 0; j < image.getHeight(); j++){
-                    matrix[i][j] = image.getPixelReader().getArgb(i,j);
-                }
-            }
             imageController = new ImageController(matrix);
             menuView = new MenuView(stage, imageController, imageView, menuBar);
 

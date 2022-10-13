@@ -15,6 +15,7 @@ public class ImageService {
     }
 
     public int[][] createHistogram(int[][] imageData){
-        return new int[0][];
+        Histogram histogram = new Histogram(matrix);
+        return histogram.calculateHistogram();
     }
 }

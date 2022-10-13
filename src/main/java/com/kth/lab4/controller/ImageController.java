@@ -13,7 +13,9 @@ public class ImageController {
         this.imageService = new ImageService(matrix);
     }
 
-    public void handleHistogramSelected(){}
+    public int[][] handleHistogramSelected(){
+        return imageService.createHistogram(new int[10][10]);
+    }
 
     public void changeImageContrast(){
         imageService.handleImage(new ContrastHandlerImpl());
