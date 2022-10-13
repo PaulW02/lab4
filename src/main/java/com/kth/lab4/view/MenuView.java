@@ -40,49 +40,28 @@ public class MenuView extends BorderPane{
 
         Button blurImageBtn = new Button("Blur image");
 
-        blurImageBtn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                int[][] blurredImageMatrix = imageController.blurImage();
-                WritableImage writableImage = (WritableImage) ImagePixelMatrixConverter.getImage(blurredImageMatrix);
-                imageView.setImage(writableImage);
-            }
-        });
-
         Button invertColorsBtn = new Button("Invert colors");
-        invertColorsBtn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                imageController.invertImageColors();
-            }
-        });
 
         Button contrastBtn = new Button("Change contrast");
-        contrastBtn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Image image = new Image(this.getClass().getResource("/images/devil.png").toString());
-                imageView.setImage(image);
-                imageController.changeImageContrast();
-            }
-        });
 
         Button edgeIntensifierBtn = new Button("Intensify edges");
-        edgeIntensifierBtn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                WritableImage writableImage = (WritableImage) ImagePixelMatrixConverter.getImage(imageController.intensifyImageEdges());
-                imageView.setImage(writableImage);
-            }
-        });
 
         Button histogramBtn = new Button("Create histogram");
-        histogramBtn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                HistogramView histogramView = new HistogramView();
-                histogramView.createChart(stage, imageView.getImage(), imageController.handleHistogramSelected());
-            }
+
+        blurImageBtn.setOnAction((ActionEvent event) -> imageView.setImage(ImagePixelMatrixConverter.getImage(imageController.blurImage())));
+
+        invertColorsBtn.setOnAction((ActionEvent event) -> imageController.invertImageColors());
+
+        contrastBtn.setOnAction((ActionEvent event) -> {
+            imageView.setImage(new Image(this.getClass().getResource("/images/devil.png").toString()));
+            imageController.changeImageContrast();
+        });
+
+        edgeIntensifierBtn.setOnAction((ActionEvent event) -> imageView.setImage(ImagePixelMatrixConverter.getImage(imageController.intensifyImageEdges())));
+
+        histogramBtn.setOnAction((ActionEvent event) -> {
+            HistogramView histogramView = new HistogramView();
+            histogramView.createChart(stage, imageView.getImage(), imageController.handleHistogramSelected());
         });
 
         stage.setScene(scene);

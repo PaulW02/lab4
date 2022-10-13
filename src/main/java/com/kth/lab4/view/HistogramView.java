@@ -31,6 +31,8 @@ public class HistogramView {
         chartHistogram.setCreateSymbols(false);
 
         imageView.setImage(image);
+        imageView.setFitWidth(400);
+        imageView.setFitHeight(400);
         chartHistogram.getData().clear();
 
         XYChart.Series seriesAlpha = new XYChart.Series();
@@ -52,7 +54,8 @@ public class HistogramView {
         chartHistogram.getData().addAll(
                 //imageHistogram.getSeriesAlpha(),
                 seriesRed, seriesGreen, seriesBlue);
-
+        chartHistogram.setMaxWidth(400);
+        chartHistogram.setMaxHeight(400);
         HBox hBox = new HBox();
         hBox.getChildren().addAll(imageView, chartHistogram);
 
