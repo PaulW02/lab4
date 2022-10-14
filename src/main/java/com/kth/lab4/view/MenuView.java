@@ -7,7 +7,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
@@ -53,7 +55,10 @@ public class MenuView extends BorderPane{
         invertColorsBtn.setOnAction((ActionEvent event) -> imageController.invertImageColors());
 
         contrastBtn.setOnAction((ActionEvent event) -> {
-            imageView.setImage(new Image(this.getClass().getResource("/images/devil.png").toString()));
+            ContrastView contrastView = new ContrastView();
+            contrastView.createSlide(stage,imageView.getImage());
+
+            //imageView.setImage(new Image(this.getClass().getResource("/images/devil.png").toString()));
             imageController.changeImageContrast();
         });
 

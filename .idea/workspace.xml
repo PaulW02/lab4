@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
+    <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="Skeleton code">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ContrastView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
