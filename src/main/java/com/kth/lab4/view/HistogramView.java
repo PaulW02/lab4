@@ -1,18 +1,12 @@
 package com.kth.lab4.view;
-import com.kth.lab4.model.Histogram;
-import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.PixelReader;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -20,7 +14,7 @@ import javafx.stage.Stage;
 
 public class HistogramView {
 
-    public void createChart(Stage primaryStage, Image image, int[][] histogramData) {
+    public void createChart(Stage primaryStage, Image image, int[][] histogramData, MenuBar menuBar) {
 
         ImageView imageView = new ImageView();
 
@@ -59,7 +53,7 @@ public class HistogramView {
         HBox hBox = new HBox();
         hBox.getChildren().addAll(imageView, chartHistogram);
 
-        VBox vBox = new VBox();
+        VBox vBox = new VBox(menuBar);
         vBox.getChildren().addAll(hBox);
 
         StackPane root = new StackPane();

@@ -17,8 +17,8 @@ public class ImageController {
         return imageService.createHistogram(new int[10][10]);
     }
 
-    public void changeImageContrast(){
-        imageService.handleImage(new ContrastHandlerImpl());
+    public int[][] changeImageContrast(int window, int level){
+        return imageService.handleImage(new ContrastHandlerImpl(window, level));
     }
 
     public int[][] blurImage(){

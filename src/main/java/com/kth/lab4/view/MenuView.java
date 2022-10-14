@@ -53,15 +53,14 @@ public class MenuView extends BorderPane{
         invertColorsBtn.setOnAction((ActionEvent event) -> imageController.invertImageColors());
 
         contrastBtn.setOnAction((ActionEvent event) -> {
-            imageView.setImage(new Image(this.getClass().getResource("/images/devil.png").toString()));
-            imageController.changeImageContrast();
+            imageView.setImage(ImagePixelMatrixConverter.getImage(imageController.changeImageContrast(105, 60)));
         });
 
         edgeIntensifierBtn.setOnAction((ActionEvent event) -> imageView.setImage(ImagePixelMatrixConverter.getImage(imageController.intensifyImageEdges())));
 
         histogramBtn.setOnAction((ActionEvent event) -> {
             HistogramView histogramView = new HistogramView();
-            histogramView.createChart(stage, imageView.getImage(), imageController.handleHistogramSelected());
+            histogramView.createChart(stage, imageView.getImage(), imageController.handleHistogramSelected(), menuBar);
         });
 
         stage.setScene(scene);

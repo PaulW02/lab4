@@ -24,7 +24,7 @@ public class Histogram {
         int[][] histogramData = new int[4][256];
         int color, aValue, rValue, gValue, bValue;
         Image image = ImagePixelMatrixConverter.getImage(matrix);
-        for (int i = 0; i < image.getWidth(); i++) {
+        for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
                 color = matrix[i][j];
                 aValue = ((color >> 24) & 0xff);

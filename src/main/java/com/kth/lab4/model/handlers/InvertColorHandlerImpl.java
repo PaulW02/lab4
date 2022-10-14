@@ -19,11 +19,9 @@ public class InvertColorHandlerImpl implements IImageHandler{
                 invertedColor = invertedColor.invert();
                 //invertColorsMatrix[i][j] = ((int)invertedColor.getOpacity()*255 << 24) | ((int)invertedColor.getRed()*255 << 16) | ((int)invertedColor.getGreen()*255 << 8) | (int)invertedColor.getBlue()*255;
                 invertColorsMatrix[i][j] = (int)invertedColor.getOpacity()*255;
-                System.out.println(invertedColor);
                 invertColorsMatrix[i][j] = (invertColorsMatrix[i][j] << 8) + (int)invertedColor.getRed()*255;
                 invertColorsMatrix[i][j] = (invertColorsMatrix[i][j] << 8) + (int)invertedColor.getGreen()*255;
                 invertColorsMatrix[i][j] = (invertColorsMatrix[i][j] << 8) + (int)invertedColor.getBlue()*255;
-                System.out.println();
             }
         }
         return  invertColorsMatrix;
