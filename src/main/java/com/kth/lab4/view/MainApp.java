@@ -18,17 +18,16 @@ public class MainApp extends Application{
     private PhotoView photoView;
     private Stage stage;
     private MenuBar menuBar;
-
     @Override
     public void start(Stage primaryStage) {
         stage = primaryStage;
         imageView = new ImageView();
-        createMenuBar();
         menuBar = getMenuBar();
+        createMenuBar();
         photoView = new PhotoView(primaryStage, menuBar);
         // we need a VBox to put the menu bar at the top of the window
-        VBox root = new VBox(menuBar,photoView);
 
+        VBox root = new VBox(menuBar,photoView);
         Scene scene = new Scene(root, 400,400);
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
@@ -61,11 +60,15 @@ public class MainApp extends Application{
         newFileItem.addEventHandler(ActionEvent.ACTION,newFileHandler);
         fileMenu.getItems().addAll(exitItem,newFileItem);
 
-        /*Menu generateMenu = new Menu("Generate");
+        /*
+
+
+        Menu generateMenu = new Menu("Generate");
         MenuItem menuItem1 = new MenuItem("Intensify");
         
         MenuItem menuItem2 = new MenuItem("contrast");
         MenuItem menuItem3 = new MenuItem("invert");
+
         EventHandler<ActionEvent> invertColorsBtn = new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -75,8 +78,7 @@ public class MainApp extends Application{
         menuItem3.addEventHandler(ActionEvent.ACTION, invertColorsBtn);
 
         generateMenu.getItems().addAll(menuItem1,menuItem2,menuItem3);
-        menuBar.getMenus().addAll(generateMenu);
-        */
+        menuBar.getMenus().addAll(generateMenu);*/
 
         menuBar = new MenuBar();
         menuBar.getMenus().addAll(fileMenu);
