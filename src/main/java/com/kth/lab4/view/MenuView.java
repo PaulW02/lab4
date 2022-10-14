@@ -54,7 +54,7 @@ public class MenuView extends BorderPane{
 
         contrastBtn.setOnAction((ActionEvent event) -> {
             imageView.setImage(new Image(this.getClass().getResource("/images/devil.png").toString()));
-            imageController.changeImageContrast();
+            imageController.changeImageContrast(105, 60);
         });
 
         edgeIntensifierBtn.setOnAction((ActionEvent event) -> imageView.setImage(ImagePixelMatrixConverter.getImage(imageController.intensifyImageEdges())));

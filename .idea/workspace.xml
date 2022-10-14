@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/Histogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/Histogram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/ContrastHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/ContrastHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/InvertColorHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/InvertColorHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MenuView.java" afterDir="false" />
-    </list>
+    <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +188,13 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1665672741852</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Window Level contrast">
+      <created>1665744187327</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1665744187327</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +215,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Skeleton code" />
     <MESSAGE value="Histogram" />
-    <option name="LAST_COMMIT_MESSAGE" value="Histogram" />
+    <MESSAGE value="Window Level contrast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Window Level contrast" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
