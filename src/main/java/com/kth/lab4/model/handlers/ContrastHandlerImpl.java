@@ -1,15 +1,20 @@
 package com.kth.lab4.model.handlers;
 
 import com.kth.lab4.model.Histogram;
+import com.kth.lab4.model.exceptions.IllegalWindowLevelException;
 
 public class ContrastHandlerImpl implements IImageHandler{
 
     private int window;
     private int level;
 
-    public ContrastHandlerImpl(int window, int level) {
-        this.window = window;
-        this.level = level;
+    public ContrastHandlerImpl(int window, int level) throws IllegalWindowLevelException {
+        if ((window > 0 && window < 256) && (level > 0 && level < 256)) {
+            this.window = window;
+            this.level = level;
+        }else{
+            throw new IllegalWindowLevelException("Either window or level value is not between 1 and 255!");
+        }
     }
 
     @Override

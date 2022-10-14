@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="" />
+    <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/exceptions/IllegalWindowLevelException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/BlurImageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/EdgeIntensifierView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/IImageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/InvertColorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/ContrastHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/ContrastHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/AnimationTimerExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/CanvasExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ComboBoxExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ContrastView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ContrastView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/LoadImageIntoImageViewWithFileChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/LoadImageIntoImageViewWithFileChooser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MenuView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/PhotoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/PhotoView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +66,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kth.lab4.view" />
+      <recent name="com.kth.lab4.model.exceptions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\paula\Desktop\KTH\Objektorienterad_programmering_java\lab4\src\main\java\com\kth\lab4\view" />
     </key>
@@ -139,6 +163,7 @@
       <updated>1665433478837</updated>
       <workItem from="1665433480410" duration="2129000" />
       <workItem from="1665473557965" duration="1249000" />
+      <workItem from="1665780043363" duration="336000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1665433530414</created>
@@ -194,7 +219,19 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1665744187327</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="Window Level contrast">
+      <created>1665745667230</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1665745667230</updated>
+    </task>
+    <task id="LOCAL−00011" summary="Window Level contrast">
+      <created>1665745760680</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1665745760680</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

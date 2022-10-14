@@ -1,34 +1,43 @@
 package com.kth.lab4.view;
 import com.kth.lab4.controller.ImageController;
+import com.kth.lab4.model.Histogram;
 import javafx.application.Application;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class MainApp extends Application{
 
     private ImageView imageView;
     private PhotoView photoView;
     private Stage stage;
+
+    private BorderPane root;
     private MenuBar menuBar;
     @Override
     public void start(Stage primaryStage) {
         stage = primaryStage;
         imageView = new ImageView();
-        menuBar = getMenuBar();
+        root = new BorderPane();
         createMenuBar();
-        photoView = new PhotoView(primaryStage, menuBar);
+        menuBar = getMenuBar();
+        root.setTop(menuBar);
+        photoView = new PhotoView(primaryStage, root);
+        root.setCenter(photoView);
         // we need a VBox to put the menu bar at the top of the window
-
-        VBox root = new VBox(menuBar,photoView);
-        Scene scene = new Scene(root, 400,400);
+        Scene scene = new Scene(root, 750,750);
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
         primaryStage.setTitle("PhotoEditor");
@@ -43,46 +52,95 @@ public class MainApp extends Application{
         Menu fileMenu = new Menu("File");
         MenuItem exitItem = new MenuItem("Exit");
         MenuItem newFileItem = new MenuItem("New File");
-        EventHandler<ActionEvent> exitHandler = new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                System.exit(0); // save data?
+        MenuItem saveFileItem = new MenuItem("Save File");
 
-            }
+        Menu photoOptions = new Menu("Generate");
+        MenuItem histogramItem = new MenuItem("Histogram");
+        MenuItem contrastItem = new MenuItem("Contrast");
+        MenuItem blurItem = new MenuItem("Blur");
+        MenuItem invertColorsItem = new MenuItem("Invert Colors");
+        MenuItem edgeIntensifierItem = new MenuItem("Intensify Edges");
+
+        EventHandler<ActionEvent> exitHandler = actionEvent -> {
+            System.exit(0); // save data?
         };
         exitItem.addEventHandler(ActionEvent.ACTION, exitHandler);
-        EventHandler<ActionEvent> newFileHandler = new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                start(stage);
-            }
-        };
+
+        EventHandler<ActionEvent> newFileHandler = actionEvent -> start(stage);
         newFileItem.addEventHandler(ActionEvent.ACTION,newFileHandler);
-        fileMenu.getItems().addAll(exitItem,newFileItem);
 
-        /*
-
-
-        Menu generateMenu = new Menu("Generate");
-        MenuItem menuItem1 = new MenuItem("Intensify");
-        
-        MenuItem menuItem2 = new MenuItem("contrast");
-        MenuItem menuItem3 = new MenuItem("invert");
-
-        EventHandler<ActionEvent> invertColorsBtn = new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                imageController.invertImageColors();
+        EventHandler<ActionEvent> saveFileHandler = actionEvent -> {
+            try{
+                Image image = ((ImageView) root.getCenter()).getImage();
+                BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null); // convert to BufferedImage
+                ImageIO.write(bufferedImage, "png", new File("copy.png")); // write image to file, in this case type "png"
+            }catch (ClassCastException e){
+                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
+                alert.showAndWait();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         };
-        menuItem3.addEventHandler(ActionEvent.ACTION, invertColorsBtn);
+        saveFileItem.addEventHandler(ActionEvent.ACTION,saveFileHandler);
 
-        generateMenu.getItems().addAll(menuItem1,menuItem2,menuItem3);
-        menuBar.getMenus().addAll(generateMenu);*/
+
+
+        EventHandler<ActionEvent> contrastHandler = actionEvent -> {
+            try{
+                new ContrastView(root, ((ImageView) root.getCenter()).getImage());
+            }catch (ClassCastException e){
+                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
+                alert.showAndWait();
+            }
+        };
+        contrastItem.addEventHandler(ActionEvent.ACTION,contrastHandler);
+
+        EventHandler<ActionEvent> histogramHandler = actionEvent -> {
+            try{
+                new HistogramView(root, ((ImageView) root.getCenter()).getImage());
+            }catch (ClassCastException e){
+                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
+                alert.showAndWait();
+            }
+        };
+        histogramItem.addEventHandler(ActionEvent.ACTION,histogramHandler);
+
+        EventHandler<ActionEvent> blurImageHandler = actionEvent -> {
+            try{
+                new BlurImageView(root, ((ImageView) root.getCenter()).getImage());
+            }catch (ClassCastException e){
+                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
+                alert.showAndWait();
+            }
+        };
+        blurItem.addEventHandler(ActionEvent.ACTION,blurImageHandler);
+
+        EventHandler<ActionEvent> invertColorsHandler = actionEvent -> {
+            try{
+                new InvertColorView(root, ((ImageView) root.getCenter()).getImage());
+            }catch (ClassCastException e){
+                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
+                alert.showAndWait();
+            }
+        };
+        invertColorsItem.addEventHandler(ActionEvent.ACTION,invertColorsHandler);
+
+        EventHandler<ActionEvent> edgeIntensifierHandler = actionEvent -> {
+            try{
+                new EdgeIntensifierView(root, ((ImageView) root.getCenter()).getImage());
+            }catch (ClassCastException e){
+                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
+                alert.showAndWait();
+            }
+        };
+        edgeIntensifierItem.addEventHandler(ActionEvent.ACTION,edgeIntensifierHandler);
+
+
+        fileMenu.getItems().addAll(exitItem,newFileItem, saveFileItem);
+        photoOptions.getItems().addAll(histogramItem, contrastItem, blurItem, invertColorsItem, edgeIntensifierItem);
 
         menuBar = new MenuBar();
-        menuBar.getMenus().addAll(fileMenu);
-
+        menuBar.getMenus().addAll(fileMenu, photoOptions);
     }
 
     public MenuBar getMenuBar(){

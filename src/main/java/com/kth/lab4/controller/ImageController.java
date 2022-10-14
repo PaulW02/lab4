@@ -5,12 +5,14 @@ import com.kth.lab4.model.handlers.BlurHandlerImpl;
 import com.kth.lab4.model.handlers.ContrastHandlerImpl;
 import com.kth.lab4.model.handlers.EdgeIntensifierHandlerImpl;
 import com.kth.lab4.model.handlers.InvertColorHandlerImpl;
+import com.kth.lab4.view.ImagePixelMatrixConverter;
+import javafx.scene.image.Image;
 
 public class ImageController {
 
     private ImageService imageService;
-    public ImageController(int[][] matrix) {
-        this.imageService = new ImageService(matrix);
+    public ImageController(Image image) {
+        this.imageService = new ImageService(ImagePixelMatrixConverter.getPixelMatrix(image));
     }
 
     public int[][] handleHistogramSelected(){

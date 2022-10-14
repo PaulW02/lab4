@@ -4,7 +4,7 @@ module com.kth.lab4 {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
-    //requires javafx.swing;
+    requires javafx.swing;
 
     opens com.kth.lab4 to javafx.fxml;
     exports com.kth.lab4;

@@ -88,7 +88,7 @@ public class LoadImageIntoImageViewWithFileChooser extends Application {
                     matrix[i][j] = image.getPixelReader().getArgb(i,j);
                 }
             }
-            imageController = new ImageController(matrix);
+            imageController = new ImageController(image);
 
 
             // this will scale the image/image view to fit its container (pane)

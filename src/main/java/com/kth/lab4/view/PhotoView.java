@@ -20,19 +20,17 @@ import java.io.File;
 public class PhotoView extends BorderPane{
 
     private ImageView imageView;
-    private MenuBar menuBar;
     private FileChooser fileChooser;
-    private ImageController imageController;
-
-    private MenuView menuView;
 
     private Stage stage;
 
+    private BorderPane borderPane;
 
-    public PhotoView(Stage stage, MenuBar menuBar) {
+
+    public PhotoView(Stage stage, BorderPane borderPane) {
         super();
         this.stage = stage;
-        this.menuBar = menuBar;
+        this.borderPane = borderPane;
         createUiComponents();
     }
 
@@ -41,20 +39,13 @@ public class PhotoView extends BorderPane{
         fileChooser = new FileChooser();
         Button loadButton = new Button("Load image");
 
-        Scene scene = new Scene(this, 400, 400);
-        scene.setFill(Color.WHITE);
-        loadButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                openAndLoadImage();
-            }
-        });
+        loadButton.setOnAction(event -> openAndLoadImage());
 
         FlowPane pane = new FlowPane();
         pane.setAlignment(Pos.BOTTOM_CENTER);
         pane.setPadding(new Insets(5));
         pane.getChildren().add(loadButton);
-        this.setBottom(pane);
+        borderPane.setBottom(pane);
     }
 
     private void openAndLoadImage() {
@@ -64,11 +55,8 @@ public class PhotoView extends BorderPane{
         // now, load the image
         if(file != null) {
             Image image = new Image(file.toURI().toString());
-            int[][] matrix = ImagePixelMatrixConverter.getPixelMatrix(image);
             imageView.setImage(image);
-            imageController = new ImageController(matrix);
-            menuView = new MenuView(stage, imageController, imageView, menuBar);
-
+            borderPane.setCenter(imageView);
             // this will scale the image/image view to fit its container (pane)
             imageView.setFitWidth(200);
             imageView.setPreserveRatio(true);
