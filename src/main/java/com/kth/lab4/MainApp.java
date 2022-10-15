@@ -1,6 +1,8 @@
-package com.kth.lab4.view;
+package com.kth.lab4;
 import com.kth.lab4.controller.ImageController;
+import com.kth.lab4.io.FileIO;
 import com.kth.lab4.model.Histogram;
+import com.kth.lab4.view.*;
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
@@ -23,7 +25,6 @@ public class MainApp extends Application{
     private ImageView imageView;
     private PhotoView photoView;
     private Stage stage;
-
     private BorderPane root;
     private MenuBar menuBar;
     @Override
@@ -61,6 +62,8 @@ public class MainApp extends Application{
         MenuItem invertColorsItem = new MenuItem("Invert Colors");
         MenuItem edgeIntensifierItem = new MenuItem("Intensify Edges");
 
+        Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
+
         EventHandler<ActionEvent> exitHandler = actionEvent -> {
             System.exit(0); // save data?
         };
@@ -72,10 +75,8 @@ public class MainApp extends Application{
         EventHandler<ActionEvent> saveFileHandler = actionEvent -> {
             try{
                 Image image = ((ImageView) root.getCenter()).getImage();
-                BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null); // convert to BufferedImage
-                ImageIO.write(bufferedImage, "png", new File("copy.png")); // write image to file, in this case type "png"
+                FileIO.saveImage(image);
             }catch (ClassCastException e){
-                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
                 alert.showAndWait();
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -83,13 +84,10 @@ public class MainApp extends Application{
         };
         saveFileItem.addEventHandler(ActionEvent.ACTION,saveFileHandler);
 
-
-
         EventHandler<ActionEvent> contrastHandler = actionEvent -> {
             try{
                 new ContrastView(root, ((ImageView) root.getCenter()).getImage());
             }catch (ClassCastException e){
-                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
                 alert.showAndWait();
             }
         };
@@ -99,7 +97,6 @@ public class MainApp extends Application{
             try{
                 new HistogramView(root, ((ImageView) root.getCenter()).getImage());
             }catch (ClassCastException e){
-                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
                 alert.showAndWait();
             }
         };
@@ -109,7 +106,6 @@ public class MainApp extends Application{
             try{
                 new BlurImageView(root, ((ImageView) root.getCenter()).getImage());
             }catch (ClassCastException e){
-                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
                 alert.showAndWait();
             }
         };
@@ -119,7 +115,6 @@ public class MainApp extends Application{
             try{
                 new InvertColorView(root, ((ImageView) root.getCenter()).getImage());
             }catch (ClassCastException e){
-                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
                 alert.showAndWait();
             }
         };
@@ -129,7 +124,6 @@ public class MainApp extends Application{
             try{
                 new EdgeIntensifierView(root, ((ImageView) root.getCenter()).getImage());
             }catch (ClassCastException e){
-                Alert alert = new Alert(Alert.AlertType.WARNING, "Choose an image first!", ButtonType.OK);
                 alert.showAndWait();
             }
         };

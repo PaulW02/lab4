@@ -26,8 +26,9 @@ public class HistogramView implements IImageView{
         VBox vBox = new VBox();
         vBox.getChildren().addAll(createChart(new ImageController(imageView.getImage()).handleHistogramSelected()));
         vBox.setAlignment(Pos.BOTTOM_CENTER);
-        imageView.setFitWidth(350);
-        imageView.setFitHeight(350);
+        imageView.setFitWidth(300);
+        imageView.setPreserveRatio(true);
+        imageView.setSmooth(true);
         borderPane.setCenter(imageView);
         borderPane.setBottom(vBox);
     }

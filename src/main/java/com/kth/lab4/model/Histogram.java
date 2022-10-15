@@ -1,9 +1,7 @@
 package com.kth.lab4.model;
 
-import com.kth.lab4.view.ImagePixelMatrixConverter;
 import javafx.scene.chart.XYChart;
 import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
 
 public class Histogram {
 

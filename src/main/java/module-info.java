@@ -10,4 +10,6 @@ module com.kth.lab4 {
     exports com.kth.lab4;
     exports com.kth.lab4.view;
     opens com.kth.lab4.view to javafx.fxml;
+    exports com.kth.lab4.model;
+    opens com.kth.lab4.model to javafx.fxml;
 }

@@ -1,6 +1,7 @@
 package com.kth.lab4.view;
 
 import com.kth.lab4.controller.ImageController;
+import com.kth.lab4.model.ImagePixelMatrixConverter;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

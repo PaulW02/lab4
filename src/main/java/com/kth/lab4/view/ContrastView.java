@@ -1,5 +1,6 @@
 package com.kth.lab4.view;
 import com.kth.lab4.controller.ImageController;
+import com.kth.lab4.model.ImagePixelMatrixConverter;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -13,22 +14,20 @@ public class ContrastView implements IImageView{
     private BorderPane borderPane;
     private Button contrastBtn;
     private ImageView imageView;
+
+    private ImageController imageController;
     public ContrastView(BorderPane borderPane, Image image) {
         this.borderPane = borderPane;
         this.imageView = new ImageView(image);
+        this.imageController = new ImageController(image);
         createUIComponents();
-        ImageController imageController = new ImageController(image);
-        createSlide(imageController);
     }
 
     @Override
     public void createUIComponents() {
         imageView.setFitWidth(300);
-        imageView.setFitHeight(300);
-        borderPane.setCenter(imageView);
-    }
-
-    public void createSlide(ImageController controller){
+        imageView.setPreserveRatio(true);
+        imageView.setSmooth(true);
         Label windowLbl = new Label("Window: ");
         Label levelLbl = new Label("Level: ");
         Slider windowSlider = new Slider(1, 255,0);
@@ -43,12 +42,13 @@ public class ContrastView implements IImageView{
         levelSlider.setBlockIncrement(50);
 
         contrastBtn = new Button("Contrast");
-        contrastBtn.setOnAction((ActionEvent event) -> imageView.setImage(ImagePixelMatrixConverter.getImage(controller.changeImageContrast((int) windowSlider.getValue(), (int) levelSlider.getValue()))));
+        contrastBtn.setOnAction((ActionEvent event) -> imageView.setImage(ImagePixelMatrixConverter.getImage(imageController.changeImageContrast((int) windowSlider.getValue(), (int) levelSlider.getValue()))));
         VBox vBox = new VBox();
         vBox.getChildren().addAll(windowLbl,windowSlider,levelLbl,levelSlider, contrastBtn);
         vBox.setAlignment(Pos.BOTTOM_CENTER);
         vBox.setPadding(new Insets(5));
         borderPane.setBottom(vBox);
+        borderPane.setCenter(imageView);
     }
 
 

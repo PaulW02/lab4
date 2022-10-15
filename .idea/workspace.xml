@@ -5,24 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/exceptions/IllegalWindowLevelException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/BlurImageView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/EdgeIntensifierView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/IImageView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/InvertColorView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/io/FileIO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/exceptions/IllegalImageFormatException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/Tests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/ContrastHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/ContrastHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/AnimationTimerExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/CanvasExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ComboBoxExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/Histogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/Histogram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/BlurHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/BlurHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/BlurImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/BlurImageView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ContrastView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ContrastView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/EdgeIntensifierView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/EdgeIntensifierView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/FXShapesExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/FileChooserExample.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/LoadImageIntoImageViewWithFileChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/LoadImageIntoImageViewWithFileChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MenuView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ImageAndGraphicsContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ImagePixelMatrixConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/ImagePixelMatrixConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ImageViewExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/InvertColorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/InvertColorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/LoadImageIntoImageViewWithFileChooser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/PhotoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/PhotoView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/PropertyBindingExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/TimerExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/WindowClosingExample.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +88,7 @@
       <module name="lab4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kth.lab4.view.*" />
+          <option name="PATTERN" value="com.kth.lab4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,7 +101,7 @@
       <module name="lab4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kth.lab4.view.*" />
+          <option name="PATTERN" value="com.kth.lab4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoadImageIntoImageViewWithFileChooser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kth.lab4.view.LoadImageIntoImageViewWithFileChooser" />
+    <configuration name="GFG" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kth.lab4.GFG" />
       <module name="lab4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kth.lab4.view.*" />
+          <option name="PATTERN" value="com.kth.lab4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,11 +123,11 @@
       </method>
     </configuration>
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kth.lab4.view.MainApp" />
+      <option name="MAIN_CLASS_NAME" value="com.kth.lab4.MainApp" />
       <module name="lab4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kth.lab4.view.*" />
+          <option name="PATTERN" value="com.kth.lab4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,7 +140,7 @@
       <module name="lab4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kth.lab4.view.*" />
+          <option name="PATTERN" value="com.kth.lab4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,10 +151,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.GFG" />
         <item itemvalue="Application.PropertyBindingExample" />
         <item itemvalue="Application.ComboBoxExample" />
         <item itemvalue="Application.AnimationTimerExample" />
-        <item itemvalue="Application.LoadImageIntoImageViewWithFileChooser" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +168,7 @@
       <updated>1665433478837</updated>
       <workItem from="1665433480410" duration="2129000" />
       <workItem from="1665473557965" duration="1249000" />
-      <workItem from="1665780043363" duration="336000" />
+      <workItem from="1665780043363" duration="9459000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1665433530414</created>
@@ -231,7 +236,13 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1665745760680</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="Fix the frontend, there is still some bugs with some of the image handlers">
+      <created>1665780480699</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1665780480699</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +264,8 @@
     <MESSAGE value="Skeleton code" />
     <MESSAGE value="Histogram" />
     <MESSAGE value="Window Level contrast" />
-    <option name="LAST_COMMIT_MESSAGE" value="Window Level contrast" />
+    <MESSAGE value="Fix the frontend, there is still some bugs with some of the image handlers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix the frontend, there is still some bugs with some of the image handlers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

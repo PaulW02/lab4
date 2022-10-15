@@ -5,7 +5,7 @@ import com.kth.lab4.model.handlers.BlurHandlerImpl;
 import com.kth.lab4.model.handlers.ContrastHandlerImpl;
 import com.kth.lab4.model.handlers.EdgeIntensifierHandlerImpl;
 import com.kth.lab4.model.handlers.InvertColorHandlerImpl;
-import com.kth.lab4.view.ImagePixelMatrixConverter;
+import com.kth.lab4.model.ImagePixelMatrixConverter;
 import javafx.scene.image.Image;
 
 public class ImageController {

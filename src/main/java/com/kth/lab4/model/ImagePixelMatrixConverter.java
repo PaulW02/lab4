@@ -1,4 +1,4 @@
-package com.kth.lab4.view;
+package com.kth.lab4.model;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
