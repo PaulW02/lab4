@@ -16,7 +16,7 @@ public class ImageController {
     }
 
     public int[][] handleHistogramSelected(){
-        return imageService.createHistogram(new int[10][10]);
+        return imageService.createHistogram();
     }
 
     public int[][] changeImageContrast(int window, int level){

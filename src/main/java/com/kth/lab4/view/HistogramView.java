@@ -44,20 +44,18 @@ public class HistogramView implements IImageView{
 
         chartHistogram.getData().clear();
 
-        XYChart.Series seriesAlpha = new XYChart.Series();
         XYChart.Series seriesRed = new XYChart.Series();
         XYChart.Series seriesGreen = new XYChart.Series();
         XYChart.Series seriesBlue = new XYChart.Series();
-        seriesAlpha.setName("alpha");
+
         seriesRed.setName("red");
         seriesGreen.setName("green");
         seriesBlue.setName("blue");
 
         for (int i = 0; i < 256; i++) {
-            seriesAlpha.getData().add(new XYChart.Data(String.valueOf(i), histogramData[0][i]));
-            seriesRed.getData().add(new XYChart.Data(String.valueOf(i), histogramData[1][i]));
-            seriesGreen.getData().add(new XYChart.Data(String.valueOf(i), histogramData[2][i]));
-            seriesBlue.getData().add(new XYChart.Data(String.valueOf(i), histogramData[3][i]));
+            seriesRed.getData().add(new XYChart.Data(String.valueOf(i), histogramData[0][i]));
+            seriesGreen.getData().add(new XYChart.Data(String.valueOf(i), histogramData[1][i]));
+            seriesBlue.getData().add(new XYChart.Data(String.valueOf(i), histogramData[2][i]));
         }
 
         chartHistogram.getData().addAll(seriesRed, seriesGreen, seriesBlue);
