@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/Histogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/Histogram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4_uml.dia" beforeDir="false" afterPath="$PROJECT_DIR$/lab4_uml.dia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/exceptions/IllegalImageFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/exceptions/IllegalImageFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/exceptions/IllegalWindowLevelException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/exceptions/IllegalWindowLevelException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/EdgeIntensifierHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/EdgeIntensifierHandlerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,7 @@
       <updated>1665433478837</updated>
       <workItem from="1665433480410" duration="2129000" />
       <workItem from="1665473557965" duration="1249000" />
-      <workItem from="1665780043363" duration="12693000" />
+      <workItem from="1665780043363" duration="19399000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1665433530414</created>
@@ -229,7 +229,13 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1665846156013</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="Small fixes">
+      <created>1665849956217</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1665849956217</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +259,8 @@
     <MESSAGE value="Window Level contrast" />
     <MESSAGE value="Fix the frontend, there is still some bugs with some of the image handlers" />
     <MESSAGE value="Some changes and fixed the blur function properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes and fixed the blur function properly" />
+    <MESSAGE value="Small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

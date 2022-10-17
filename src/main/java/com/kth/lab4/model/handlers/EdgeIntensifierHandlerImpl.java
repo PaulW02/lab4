@@ -10,14 +10,14 @@ public class EdgeIntensifierHandlerImpl implements IImageHandler{
         int[][] blurredImageMatrix = new int[rows-2][cols-2];
         for (int r=1; r < rows-1; r++) {
             for (int c=1; c < cols-1; c++){
-                blurredImageMatrix[r-1][c-1] = getAverage(originalImg, r, c);
+                blurredImageMatrix[r-1][c-1] = calculateAlgorithm(originalImg, r, c);
             }
         }
 
         return blurredImageMatrix;
     }
 
-    private int getAverage(int[][] image, int r, int c) {
+    private int calculateAlgorithm(int[][] image, int r, int c) {
         return (image[r-1][c-1] * 0) + (image[r-1][c] * 1) + (image[r-1][c+1] * 0) +
                 (image[r][c-1] * 1) + (image[r][c] * -4) + (image[r][c+1] * 1) +
                 (image[r+1][c-1] * 0) + (image[r+1][c] * 1) + (image[r+1][c+1] * 0);
