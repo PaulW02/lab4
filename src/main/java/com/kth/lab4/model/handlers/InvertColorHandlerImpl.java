@@ -1,7 +1,5 @@
 package com.kth.lab4.model.handlers;
 
-import java.awt.Color;
-
 public class InvertColorHandlerImpl implements IImageHandler{
 
     /**
@@ -13,20 +11,20 @@ public class InvertColorHandlerImpl implements IImageHandler{
         int[][] invertColorsMatrix = new int[originalImg.length][originalImg[0].length];
         for (int y = 0; y < originalImg[0].length; y++) {
             for (int x = 0; x < originalImg.length; x++) {
-                int p = originalImg[x][y];
-                int a = (p >> 24) & 0xff;
-                int r = (p >> 16) & 0xff;
-                int g = (p >> 8) & 0xff;
-                int b = p & 0xff;
+                int color = originalImg[x][y];
+                int alpha = (color >> 24) & 0xff;
+                int red = (color >> 16) & 0xff;
+                int green = (color >> 8) & 0xff;
+                int blue = color & 0xff;
 
                 // subtract RGB from 255
-                r = 255 - r;
-                g = 255 - g;
-                b = 255 - b;
+                red = 255 - red;
+                green = 255 - green;
+                blue = 255 - blue;
 
                 // set new RGB value
-                p = (a << 24) | (r << 16) | (g << 8) | b;
-                invertColorsMatrix[x][y] = p;
+                color = (alpha << 24) | (red << 16) | (green << 8) | blue;
+                invertColorsMatrix[x][y] = color;
             }
         }
         return  invertColorsMatrix;
