@@ -1,12 +1,11 @@
 package com.kth.lab4.model.handlers;
 
-import com.kth.lab4.model.Histogram;
 import com.kth.lab4.model.exceptions.IllegalWindowLevelException;
 
 public class ContrastHandlerImpl implements IImageHandler{
 
-    private int window;
-    private int level;
+    private final int window;
+    private final int level;
 
     public ContrastHandlerImpl(int window, int level) throws IllegalWindowLevelException {
         if ((window > 0 && window < 256) && (level > 0 && level < 256)) {
@@ -24,7 +23,7 @@ public class ContrastHandlerImpl implements IImageHandler{
      */
     @Override
     public int[][] processImage(int[][] originalImg) {
-        int color, a = (level-(window/2)), b = (level+(window/2));
+        int color;
         int[] argb = new int[4];
         int[][] grayScale = new int[originalImg.length][originalImg[0].length];
         for (int i = 0; i < originalImg.length; i++) {

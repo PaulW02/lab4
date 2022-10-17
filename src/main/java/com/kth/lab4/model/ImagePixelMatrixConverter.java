@@ -9,7 +9,7 @@ public class ImagePixelMatrixConverter {
     /**
      * Takes an uploaded image and turns it in to a 2D-matrix with pixels and returns it.
      * @param image the image that has been uploaded.
-     * @return the pixelmatrix of the image.
+     * @return the pixel matrix of the image.
      */
     public static int[][] getPixelMatrix(Image image) {
         int width = (int) image.getWidth();
@@ -27,7 +27,7 @@ public class ImagePixelMatrixConverter {
     }
 
     /**
-     * takes a pixelmatirx and turns it into the original form and returns it.
+     * takes a pixel matrix and turns it into an image and returns it.
      * @param pixelMatrix  the matrix that is to be reformed to an image.
      * @return the image that has been converted from a matrix.
      */

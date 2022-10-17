@@ -1,27 +1,32 @@
 package com.kth.lab4.model.handlers;
 
-import javafx.scene.paint.Color;
+import java.awt.Color;
 
 public class InvertColorHandlerImpl implements IImageHandler{
+
+    /**
+     * @param originalImg the 2D matrix of the original image
+     * @return a new 2D matrix with the colors being inverted
+     */
     @Override
     public int[][] processImage(int[][] originalImg) {
         int[][] invertColorsMatrix = new int[originalImg.length][originalImg[0].length];
-        int aValue, rValue, gValue, bValue, color;
-        for (int i = 0; i < originalImg.length; i++) {
-            for (int j = 0; j < originalImg[0].length; j++) {
-                color = originalImg[i][j];
-                aValue = ((color >> 24) & 0xff);
-                rValue = ((color >> 16) & 0xff);
-                gValue = ((color >> 8) & 0xff);
-                bValue = ((color) & 0xff);
+        for (int y = 0; y < originalImg[0].length; y++) {
+            for (int x = 0; x < originalImg.length; x++) {
+                int p = originalImg[x][y];
+                int a = (p >> 24) & 0xff;
+                int r = (p >> 16) & 0xff;
+                int g = (p >> 8) & 0xff;
+                int b = p & 0xff;
 
-                Color invertedColor = new Color((double)rValue/255, (double)gValue/255, (double)bValue/255, (double) aValue/255);
-                invertedColor = invertedColor.invert();
-                //invertColorsMatrix[i][j] = ((int)invertedColor.getOpacity()*255 << 24) | ((int)invertedColor.getRed()*255 << 16) | ((int)invertedColor.getGreen()*255 << 8) | (int)invertedColor.getBlue()*255;
-                invertColorsMatrix[i][j] = (int)invertedColor.getOpacity()*255;
-                invertColorsMatrix[i][j] = (invertColorsMatrix[i][j] << 8) + (int)invertedColor.getRed()*255;
-                invertColorsMatrix[i][j] = (invertColorsMatrix[i][j] << 8) + (int)invertedColor.getGreen()*255;
-                invertColorsMatrix[i][j] = (invertColorsMatrix[i][j] << 8) + (int)invertedColor.getBlue()*255;
+                // subtract RGB from 255
+                r = 255 - r;
+                g = 255 - g;
+                b = 255 - b;
+
+                // set new RGB value
+                p = (a << 24) | (r << 16) | (g << 8) | b;
+                invertColorsMatrix[x][y] = p;
             }
         }
         return  invertColorsMatrix;

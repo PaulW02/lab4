@@ -42,11 +42,11 @@ public class BlurHandlerImpl implements IImageHandler{
     }
 
     /**
-     * Takes an image and a specific row and column and returns the average value of the neighboring pixels.
+     * Takes an image and a specific row and column and returns the average value of the neighboring pixels including the current pixel.
      * @param image the matrix of the image to be used.
      * @param r the specific row.
      * @param c the specific column.
-     * @return returns the average value of the neighboring pixels.
+     * @return returns the average value of the neighboring pixels including the current pixel.
      */
     private int getAverage(int[][] image, int r, int c) {
         return (image[r-1][c-1] + image[r-1][c] + image[r-1][c+1] +
