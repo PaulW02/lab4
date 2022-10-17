@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/controller/ImageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/Histogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/Histogram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/ImagePixelMatrixConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/ImagePixelMatrixConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/BlurHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/BlurHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/ContrastHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/ContrastHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/EdgeIntensifierHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/EdgeIntensifierHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/PhotoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/PhotoView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

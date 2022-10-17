@@ -6,6 +6,11 @@ import javafx.scene.image.WritableImage;
 
 public class ImagePixelMatrixConverter {
 
+    /**
+     * Takes an uploaded image and turns it in to a 2D-matrix with pixels and returns it.
+     * @param image the image that has been uploaded.
+     * @return the pixelmatrix of the image.
+     */
     public static int[][] getPixelMatrix(Image image) {
         int width = (int) image.getWidth();
         int height = (int) image.getHeight();
@@ -21,6 +26,11 @@ public class ImagePixelMatrixConverter {
         return pixelMatrix;
     }
 
+    /**
+     * takes a pixelmatirx and turns it into the original form and returns it.
+     * @param pixelMatrix  the matrix that is to be reformed to an image.
+     * @return the image that has been converted from a matrix.
+     */
     public static Image getImage(int[][] pixelMatrix) {
         WritableImage writableImage = new WritableImage(pixelMatrix.length, pixelMatrix[0].length);
         for (int i = 0; i < pixelMatrix.length; i++){

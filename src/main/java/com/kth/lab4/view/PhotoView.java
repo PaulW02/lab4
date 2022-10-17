@@ -18,7 +18,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.io.File;
 
 public class PhotoView extends BorderPane{

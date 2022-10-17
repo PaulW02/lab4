@@ -3,6 +3,13 @@ package com.kth.lab4.model.handlers;
 import java.awt.Color;
 
 public class BlurHandlerImpl implements IImageHandler{
+
+    /**
+     * Takes a 2D matrix and uses an algorithm that takes the different colors of each pixels in the matrix and
+     * smoothes each one of them, and then returns the blurred matrix.
+     * @param originalImg gets the 2D matrix of the original image
+     * @return the matrix that has been blurred.
+     */
     @Override
     public int[][] processImage(int[][] originalImg) {
         int rows = originalImg.length;
@@ -33,6 +40,14 @@ public class BlurHandlerImpl implements IImageHandler{
         }
         return blurredImageMatrix;
     }
+
+    /**
+     * Takes an image and a specific row and column and returns the average value of the neighboring pixels.
+     * @param image the matrix of the image to be used.
+     * @param r the specific row.
+     * @param c the specific column.
+     * @return returns the average value of the neighboring pixels.
+     */
     private int getAverage(int[][] image, int r, int c) {
         return (image[r-1][c-1] + image[r-1][c] + image[r-1][c+1] +
                 image[r][c-1] + image[r][c] + image[r][c+1] +

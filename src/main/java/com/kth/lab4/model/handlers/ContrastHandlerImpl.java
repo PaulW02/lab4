@@ -17,6 +17,11 @@ public class ContrastHandlerImpl implements IImageHandler{
         }
     }
 
+    /**
+     * Takes a 2D matrix of an image and returns a matrix with a grayscale calculated with level and window.
+     * @param originalImg gets the 2D matrix of the original image.
+     * @return the matrix of the grayscale that has been calculated.
+     */
     @Override
     public int[][] processImage(int[][] originalImg) {
         int color, a = (level-(window/2)), b = (level+(window/2));
