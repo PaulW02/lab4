@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 
 public class InvertColorView implements IImageHandlerView {
     private BorderPane borderPane;
-    private Button blurBtn;
+    private Button invertColorBtn;
     private ImageView imageView;
 
     public InvertColorView(BorderPane borderPane, Image image) {
@@ -25,18 +25,18 @@ public class InvertColorView implements IImageHandlerView {
 
     @Override
     public void createUIComponents() {
-        blurBtn = new Button("Invert colors");
+        invertColorBtn = new Button("Invert colors");
         imageView.setFitWidth(300);
         imageView.setPreserveRatio(true);
         imageView.setSmooth(true);
         borderPane.setCenter(imageView);
-        VBox vBox = new VBox(blurBtn);
+        VBox vBox = new VBox(invertColorBtn);
         vBox.setAlignment(Pos.BOTTOM_CENTER);
         vBox.setPadding(new Insets(5));
         borderPane.setBottom(vBox);
     }
 
     private void addEventHandlers(ImageController controller) {
-        blurBtn.setOnAction((ActionEvent event) -> imageView.setImage(controller.invertImageColors()));
+        invertColorBtn.setOnAction((ActionEvent event) -> imageView.setImage(controller.invertImageColors()));
     }
 }

@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 
 public class EdgeIntensifierView implements IImageHandlerView {
     private BorderPane borderPane;
-    private Button blurBtn;
+    private Button edgeIntensifierBtn;
     private ImageView imageView;
 
     public EdgeIntensifierView(BorderPane borderPane, Image image) {
@@ -25,18 +25,18 @@ public class EdgeIntensifierView implements IImageHandlerView {
 
     @Override
     public void createUIComponents() {
-        blurBtn = new Button("Intensify edges");
+        edgeIntensifierBtn = new Button("Intensify edges");
         imageView.setFitWidth(300);
         imageView.setPreserveRatio(true);
         imageView.setSmooth(true);
         borderPane.setCenter(imageView);
-        VBox vBox = new VBox(blurBtn);
+        VBox vBox = new VBox(edgeIntensifierBtn);
         vBox.setAlignment(Pos.BOTTOM_CENTER);
         vBox.setPadding(new Insets(5));
         borderPane.setBottom(vBox);
     }
 
     private void addEventHandlers(ImageController controller) {
-        blurBtn.setOnAction((ActionEvent event) -> imageView.setImage(controller.intensifyImageEdges()));
+        edgeIntensifierBtn.setOnAction((ActionEvent event) -> imageView.setImage(controller.intensifyImageEdges()));
     }
 }
