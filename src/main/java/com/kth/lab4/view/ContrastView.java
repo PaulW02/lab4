@@ -9,7 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class ContrastView implements IImageHandlerView {
+public class ContrastView {
     private BorderPane borderPane;
     private Button contrastBtn;
     private ImageView imageView;
@@ -22,7 +22,6 @@ public class ContrastView implements IImageHandlerView {
         createUIComponents();
     }
 
-    @Override
     public void createUIComponents() {
         imageView.setFitWidth(300);
         imageView.setPreserveRatio(true);

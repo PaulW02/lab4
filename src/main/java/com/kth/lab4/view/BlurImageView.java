@@ -10,7 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class BlurImageView implements IImageHandlerView {
+public class BlurImageView {
     private BorderPane borderPane;
     private Button blurBtn;
     private ImageView imageView;
@@ -23,7 +23,6 @@ public class BlurImageView implements IImageHandlerView {
             addEventHandlers(imageController);
     }
 
-    @Override
     public void createUIComponents() {
         blurBtn = new Button("Blur image");
         imageView.setFitWidth(300);

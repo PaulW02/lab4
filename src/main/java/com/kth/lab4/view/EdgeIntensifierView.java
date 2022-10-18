@@ -10,7 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class EdgeIntensifierView implements IImageHandlerView {
+public class EdgeIntensifierView {
     private BorderPane borderPane;
     private Button edgeIntensifierBtn;
     private ImageView imageView;
@@ -23,7 +23,6 @@ public class EdgeIntensifierView implements IImageHandlerView {
         addEventHandlers(imageController);
     }
 
-    @Override
     public void createUIComponents() {
         edgeIntensifierBtn = new Button("Intensify edges");
         imageView.setFitWidth(300);

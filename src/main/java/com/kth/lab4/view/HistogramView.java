@@ -10,7 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class HistogramView implements IImageHandlerView {
+public class HistogramView {
 
     private final BorderPane borderPane;
     private final ImageView imageView;
@@ -21,7 +21,6 @@ public class HistogramView implements IImageHandlerView {
         createUIComponents();
     }
 
-    @Override
     public void createUIComponents() {
         VBox vBox = new VBox();
         vBox.getChildren().addAll(createChart(new ImageController(imageView.getImage()).handleHistogramSelected()));

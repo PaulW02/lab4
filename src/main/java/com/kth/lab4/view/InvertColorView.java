@@ -10,7 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class InvertColorView implements IImageHandlerView {
+public class InvertColorView {
     private BorderPane borderPane;
     private Button invertColorBtn;
     private ImageView imageView;
@@ -23,7 +23,6 @@ public class InvertColorView implements IImageHandlerView {
         addEventHandlers(imageController);
     }
 
-    @Override
     public void createUIComponents() {
         invertColorBtn = new Button("Invert colors");
         imageView.setFitWidth(300);
