@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/EdgeIntensifierHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/EdgeIntensifierHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/IImageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/model/handlers/IImageHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,7 @@
       <workItem from="1665433480410" duration="2129000" />
       <workItem from="1665473557965" duration="1249000" />
       <workItem from="1665780043363" duration="20754000" />
-      <workItem from="1666037913809" duration="4311000" />
+      <workItem from="1666037913809" duration="5013000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1665433530414</created>
@@ -251,7 +250,13 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1666039589761</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL−00018" summary="Small fixes">
+      <created>1666094879374</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1666094879374</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
