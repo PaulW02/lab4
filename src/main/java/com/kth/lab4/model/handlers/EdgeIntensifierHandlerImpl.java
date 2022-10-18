@@ -28,8 +28,8 @@ public class EdgeIntensifierHandlerImpl implements IImageHandler{
      * @return returns the value of the neighboring pixels including the current pixel through the edge intensifier algorithm.
      */
     private int calculateAlgorithm(int[][] image, int r, int c) {
-        return (image[r-1][c-1] * 0) + (image[r-1][c] * 1) + (image[r-1][c+1] * 0) +
-                (image[r][c-1] * 1) + (image[r][c] * -4) + (image[r][c+1] * 1) +
-                (image[r+1][c-1] * 0) + (image[r+1][c] * 1) + (image[r+1][c+1] * 0);
+        return (image[r-1][c-1] * 3) + (image[r-1][c] * 10) + (image[r-1][c+1] * 3) +
+                (image[r][c-1] * 0) + (image[r][c] * 0) + (image[r][c+1] * 0) +
+                (image[r+1][c-1] * -3) + (image[r+1][c] * -10) + (image[r+1][c+1] * -3);
     }
 }
