@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/BlurImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/BlurImageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ContrastView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/ContrastView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/EdgeIntensifierView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/EdgeIntensifierView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/HistogramView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/IImageHandlerView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/InvertColorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/view/InvertColorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4_uml.dia" beforeDir="false" afterPath="$PROJECT_DIR$/lab4_uml.dia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +148,7 @@
       <workItem from="1665433480410" duration="2129000" />
       <workItem from="1665473557965" duration="1249000" />
       <workItem from="1665780043363" duration="20754000" />
-      <workItem from="1666037913809" duration="8044000" />
+      <workItem from="1666037913809" duration="9623000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1665433530414</created>
@@ -280,7 +276,13 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1666098228500</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="Small fixes">
+      <created>1666102539751</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1666102539751</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

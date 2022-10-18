@@ -22,7 +22,6 @@ import java.io.IOException;
 
 public class MainApp extends Application{
 
-    private ImageView imageView;
     private PhotoView photoView;
     private Stage stage;
     private BorderPane root;
@@ -30,10 +29,8 @@ public class MainApp extends Application{
     @Override
     public void start(Stage primaryStage) {
         stage = primaryStage;
-        imageView = new ImageView();
         root = new BorderPane();
         createMenuBar();
-        menuBar = getMenuBar();
         root.setTop(menuBar);
         photoView = new PhotoView(primaryStage, root);
         root.setCenter(photoView);
@@ -137,7 +134,4 @@ public class MainApp extends Application{
         menuBar.getMenus().addAll(fileMenu, photoOptions);
     }
 
-    public MenuBar getMenuBar(){
-        return this.menuBar;
-    }
 }
