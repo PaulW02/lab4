@@ -1,6 +1,5 @@
 package com.kth.lab4.view;
 import com.kth.lab4.controller.ImageController;
-import com.kth.lab4.model.ImagePixelMatrixConverter;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -10,7 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class ContrastView implements IImageView{
+public class ContrastView implements IImageHandlerView {
     private BorderPane borderPane;
     private Button contrastBtn;
     private ImageView imageView;
@@ -42,7 +41,7 @@ public class ContrastView implements IImageView{
         levelSlider.setBlockIncrement(50);
 
         contrastBtn = new Button("Contrast");
-        contrastBtn.setOnAction((ActionEvent event) -> imageView.setImage(ImagePixelMatrixConverter.getImage(imageController.changeImageContrast((int) windowSlider.getValue(), (int) levelSlider.getValue()))));
+        contrastBtn.setOnAction((ActionEvent event) -> imageView.setImage(imageController.changeImageContrast((int) windowSlider.getValue(), (int) levelSlider.getValue())));
         VBox vBox = new VBox();
         vBox.getChildren().addAll(windowLbl,windowSlider,levelLbl,levelSlider, contrastBtn);
         vBox.setAlignment(Pos.BOTTOM_CENTER);

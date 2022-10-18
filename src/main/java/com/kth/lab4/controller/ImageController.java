@@ -19,20 +19,20 @@ public class ImageController {
         return imageService.createHistogram();
     }
 
-    public int[][] changeImageContrast(int window, int level){
-        return imageService.handleImage(new ContrastHandlerImpl(window, level));
+    public Image changeImageContrast(int window, int level){
+        return ImagePixelMatrixConverter.getImage(imageService.handleImage(new ContrastHandlerImpl(window, level)));
     }
 
-    public int[][] blurImage(){
-        return imageService.handleImage(new BlurHandlerImpl());
+    public Image blurImage(){
+        return ImagePixelMatrixConverter.getImage(imageService.handleImage(new BlurHandlerImpl()));
     }
 
-    public int[][] invertImageColors(){
-        return imageService.handleImage(new InvertColorHandlerImpl());
+    public Image invertImageColors(){
+        return ImagePixelMatrixConverter.getImage(imageService.handleImage(new InvertColorHandlerImpl()));
     }
 
-    public int[][] intensifyImageEdges(){
-        return imageService.handleImage(new EdgeIntensifierHandlerImpl());
+    public Image intensifyImageEdges(){
+        return ImagePixelMatrixConverter.getImage(imageService.handleImage(new EdgeIntensifierHandlerImpl()));
     }
 
 }

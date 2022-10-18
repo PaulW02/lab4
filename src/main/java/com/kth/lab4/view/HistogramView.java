@@ -10,7 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class HistogramView implements IImageView{
+public class HistogramView implements IImageHandlerView {
 
     private final BorderPane borderPane;
     private final ImageView imageView;

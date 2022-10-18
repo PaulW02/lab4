@@ -1,7 +1,6 @@
 package com.kth.lab4.view;
 
 import com.kth.lab4.controller.ImageController;
-import com.kth.lab4.model.ImagePixelMatrixConverter;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -11,7 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class InvertColorView implements IImageView{
+public class InvertColorView implements IImageHandlerView {
     private BorderPane borderPane;
     private Button blurBtn;
     private ImageView imageView;
@@ -38,6 +37,6 @@ public class InvertColorView implements IImageView{
     }
 
     private void addEventHandlers(ImageController controller) {
-        blurBtn.setOnAction((ActionEvent event) -> imageView.setImage(ImagePixelMatrixConverter.getImage(controller.invertImageColors())));
+        blurBtn.setOnAction((ActionEvent event) -> imageView.setImage(controller.invertImageColors()));
     }
 }

@@ -1,5 +1,5 @@
 package com.kth.lab4.view;
 
-public interface IImageView {
+public interface IImageHandlerView {
     public abstract void createUIComponents();
 }
