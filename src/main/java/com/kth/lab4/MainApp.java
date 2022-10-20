@@ -35,7 +35,7 @@ public class MainApp extends Application{
         photoView = new PhotoView(primaryStage, root);
         root.setCenter(photoView);
         // we need a VBox to put the menu bar at the top of the window
-        Scene scene = new Scene(root, 750,750);
+        Scene scene = new Scene(root, 650,650);
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
         primaryStage.setTitle("PhotoEditor");

@@ -7,6 +7,7 @@
     <list default="true" id="51c8ad45-6e96-4f56-bd22-c7fe494b4eeb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4_uml.dia" beforeDir="false" afterPath="$PROJECT_DIR$/lab4_uml.dia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kth/lab4/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kth/lab4/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +148,7 @@
       <workItem from="1665433480410" duration="2129000" />
       <workItem from="1665473557965" duration="1249000" />
       <workItem from="1665780043363" duration="20754000" />
-      <workItem from="1666037913809" duration="12976000" />
+      <workItem from="1666037913809" duration="15732000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1665433530414</created>
@@ -287,7 +288,13 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1666119511366</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="Small fixes">
+      <created>1666215195289</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1666215195289</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
